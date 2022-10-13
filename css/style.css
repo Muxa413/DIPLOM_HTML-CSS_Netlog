@@ -22,6 +22,8 @@ a {
   z-index: 2;
 }
 
+
+
 /*HEADER*/
 .header {
   background-image: url(../img/banner-bg.jpg);
@@ -35,7 +37,7 @@ a {
   z-index: 0;
 }
 
-header::after {
+.header::after {
   display: block;
   position: absolute;
   content: "";
@@ -96,6 +98,8 @@ header::after {
   line-height: 75px;
 }
 
+
+
 /*MAIN*/
 .main > .wrapper {
   display: flex;
@@ -108,26 +112,29 @@ header::after {
 .section {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: top;
+  margin-bottom: 5px;
 }
 
 .post {
   max-width: 898px;
-  display: inline-flex;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  vertical-align: top;
+  margin-bottom: 60px;
 }
 
 .post_img {
   display: block;
-  max-width: 380px;
-  margin-right: 30px;
+  width: 380px;
 }
 
 .post_content {
-  max-width: 380px;
+  width: 380px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .post_nav li {
@@ -138,7 +145,7 @@ header::after {
   margin-right: 8px;
 }
 
-.post_content h2 {
+.post_header h2 {
   font-size: 20px;
   margin-bottom: 38px;
 }
@@ -159,6 +166,8 @@ header::after {
   margin-top: 54px;
 }
 
+
+
 /*ASIDE*/
 .aside {
   width: 272px;
@@ -171,18 +180,18 @@ header::after {
 
 .aside_post {
   display: flex;
-  justify-content: space-between;
   font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .aside_img {
   display: block;
-  max-width: 72px;
-  margin-right: 16px;
+  width: 72px;
 }
 
-.aside_content {}
-
+.aside_content {
+  margin-left: 16px;
+}
 
 .aside_content h4 {
   font-size: 14px;
@@ -190,7 +199,37 @@ header::after {
 
 
 
-
+/*FOOTER*/
 .footer {
   text-align: center;
+}
+
+.footer_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7f6;
+  padding: 30px 0;
+}
+
+.footer_link {
+  display: block;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 4px;
+}
+
+.footer_link img {
+  width: 26px;
+}
+
+.footer_link:hover {
+  background-color: #b59f5b;
+  border-radius: 8px;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #999;
+  padding: 74px 0 40px;
 }
