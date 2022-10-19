@@ -79,9 +79,9 @@ a {
 
 .header_link:hover,
 .post_nav li:hover {
-  border-radius: 2px;
-  background-color: #0f0d0e;
-  color: #b59f5b;
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .header_link:last-child {
@@ -138,13 +138,17 @@ a {
 
 .post_nav li {
   display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b59f5b;
   font-size: 14px;
   line-height: 24px;
-  padding: 0 6px;
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 .post_header h2 {
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 20px;
   margin-bottom: 38px;
 }
@@ -167,18 +171,32 @@ a {
 
 
 
-/*ASIDE*/
+/*ASIDE_Link*/
 .aside {
   width: 272px;
 }
 
 .aside h3 {
+  font-size: 14px;
   text-align: center;
+  text-transform: uppercase;
+  position: relative;
   margin-bottom: 46px;
 }
 
-.aside_post {
+.aside h3::before {
+  position: absolute;
+  content: "";
+  background-color: #b59f5b;
+  height: 4px;
+  top: 32px;
+  left: 102px;
+  right: 102px;
+}
+
+.aside_link {
   display: flex;
+  align-items: center;
   font-size: 12px;
   margin-bottom: 22px;
 }
@@ -186,17 +204,61 @@ a {
 .aside_img {
   display: block;
   width: 72px;
+  height: 72px;
+  margin-right: 16px;
 }
 
-.aside_content {
-  margin-left: 16px;
-}
-
-.aside_content h4 {
+.aside h4 {
   font-size: 14px;
   text-transform: uppercase;
 }
 
+/*ASIDE_Form*/
+.aside_form {
+  display: flex;
+  font-size: 13px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.aside_form > .text {
+  height: 46px;
+  border: none;
+  background-color: #f4f7f6;
+  padding: 0 18px;
+  flex: 1 0 auto;
+}
+
+.aside_form > .button {
+  height: 46px;
+  width: 48px;
+  flex: 0 0 auto;
+  border: none;
+  background-image: url(../img/search.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center center;
+  background-color: #b59f5b;
+  cursor: pointer;
+}
+
+.form_m {
+  flex-direction: column;
+}
+
+.form_m > .text {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.form_m > .button {
+  width: 100%;
+  background-image: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 
 /*FOOTER*/
