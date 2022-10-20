@@ -82,8 +82,8 @@ a {
 .header_link:hover,
 .post_nav li:hover {
   color: #000;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
+  border-radius: 2px;
+  background-color: #f4f7f6;
 }
 
 .header_link:last-child {
@@ -122,6 +122,7 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
   vertical-align: top;
   margin-bottom: 60px;
 }
@@ -133,8 +134,6 @@ a {
 
 .post_content {
   width: 380px;
-  margin-left: 30px;
-  margin-right: 30px;
 }
 
 .post_nav li {
@@ -174,6 +173,7 @@ a {
 /*ASIDE_Link*/
 .aside {
   width: 272px;
+  margin: 0 auto 60px;
 }
 
 .aside h3 {
@@ -199,13 +199,14 @@ a {
   align-items: center;
   font-size: 12px;
   margin-bottom: 22px;
+  gap: 16px;
 }
 
 .aside_img {
   display: block;
   width: 72px;
   height: 72px;
-  margin-right: 16px;
+
 }
 
 .aside h4 {
@@ -266,26 +267,36 @@ a {
 .aside_tag {
   text-align: center;
   display: flex;
-  grid-gap: 6px;
   align-items: center;
   flex-wrap: wrap;
+  grid-gap: 6px;
   margin-bottom: 60px;
-}
-
-.aside_tag > li {
-  display: block;
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 .tag_check {
   display: block;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
   border: 3px solid #eee;
   padding: 7px 12px;
 }
 
-.aside_themes > li {
+input[type=checkbox] {
+  position: absolute;
+  display: none;
+}
+
+input[type=checkbox]:checked + .tag_check {
+  background: #b59f5b;
+}
+
+.tag_check:hover {
+  background: #b59f5b;
+  cursor: pointer;
+}
+
+.themes_btn {
   display: block;
   font-size: 14px;
   font-weight: bold;
@@ -293,16 +304,26 @@ a {
   border-bottom: 1px solid #eee;
 }
 
-.aside_themes > li > span {
+.themes_btn:hover {
+  background: #f4f7f6;
+}
+
+.themes_btn > span {
   font-size: 12px;
   color: #b59f5b;
   vertical-align: 6px;
+}
+
+.themes_section {
+  /*  display: none;*/
+  margin-left: 20px;
 }
 
 
 /*FOOTER*/
 .footer {
   text-align: center;
+  margin: 0 auto;
 }
 
 .footer_nav {
@@ -311,22 +332,19 @@ a {
   align-items: center;
   background-color: #f4f7f6;
   padding: 30px 0;
+  gap: 12px;
 }
 
 .footer_link {
   display: block;
-  margin-left: 12px;
-  margin-right: 12px;
+  width: 36px;
+  height: 36px;
   padding: 4px;
-}
-
-.footer_link img {
-  width: 26px;
 }
 
 .footer_link:hover {
   background-color: #b59f5b;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .footer p {
