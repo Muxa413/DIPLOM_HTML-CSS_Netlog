@@ -18,10 +18,7 @@ a {
   max-width: 1200px;
   padding: 0 16px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
 }
-
 
 
 /*HEADER*/
@@ -35,6 +32,11 @@ a {
   color: #fff;
   position: relative;
   z-index: 0;
+}
+
+.header > .wrapper {
+  position: relative;
+  z-index: 2;
 }
 
 .header::after {
@@ -97,7 +99,6 @@ a {
   font-size: 45px;
   line-height: 75px;
 }
-
 
 
 /*MAIN*/
@@ -170,7 +171,6 @@ a {
 }
 
 
-
 /*ASIDE_Link*/
 .aside {
   width: 272px;
@@ -212,6 +212,7 @@ a {
   font-size: 14px;
   text-transform: uppercase;
 }
+
 
 /*ASIDE_Form*/
 .aside_form {
@@ -258,6 +259,44 @@ a {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+
+/*ASIDE_Tag-Themes*/
+.aside_tag {
+  text-align: center;
+  display: flex;
+  grid-gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.aside_tag > li {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tag_check {
+  display: block;
+  border: 3px solid #eee;
+  padding: 7px 12px;
+}
+
+.aside_themes > li {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.aside_themes > li > span {
+  font-size: 12px;
+  color: #b59f5b;
+  vertical-align: 6px;
 }
 
 
