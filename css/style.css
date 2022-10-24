@@ -289,12 +289,12 @@ a {
   padding: 7px 12px;
 }
 
-input[type=checkbox] {
+.aside_tag input[type=checkbox] {
   position: absolute;
   display: none;
 }
 
-input[type=checkbox]:checked + .tag_check {
+.aside_tag input[type=checkbox]:checked + .tag_check {
   background: #b59f5b;
 }
 
@@ -321,8 +321,17 @@ input[type=checkbox]:checked + .tag_check {
   vertical-align: 6px;
 }
 
+.aside_themes input[type=checkbox] {
+  position: absolute;
+  display: none;
+}
+
+.aside_themes input[type=checkbox]:checked + .themes_btn {
+  background: #f4f7f6;
+}
+
 .themes_section {
-  /*  display: none;*/
+/*  display: none;*/
   margin-left: 20px;
 }
 
