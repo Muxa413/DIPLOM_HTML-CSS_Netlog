@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   word-wrap: break-word;
-  box-sizing: border-box;
 }
 
 li,
@@ -16,7 +15,7 @@ a {
 
 .wrapper {
   max-width: 1200px;
-  padding: 0 16px;
+  padding: 0 12px;
   margin: 0 auto;
 }
 
@@ -61,8 +60,7 @@ a {
 
 .header_logo {
   display: block;
-  min-width: 180px;
-  max-width: 180px;
+  width: 180px;
   margin-right: 20px;
 }
 
@@ -80,15 +78,15 @@ a {
   padding: 0 6px;
 }
 
+.header_link:last-child {
+  margin-right: 0;
+}
+
 .header_link:hover,
 .post_nav li:hover {
   color: #000;
   border-radius: 2px;
   background-color: #f4f7f6;
-}
-
-.header_link:last-child {
-  margin-right: 0;
 }
 
 .header_down {
@@ -194,7 +192,7 @@ a {
 
 .aside_link {
   display: flex;
-  align-items: center;
+  min-height: 70px;
   font-size: 12px;
   margin-bottom: 22px;
   border: 2px solid transparent;
@@ -208,7 +206,6 @@ a {
 .aside_img {
   display: block;
   max-width: 80px;
-  height: 70px;
 }
 
 .aside_data {
@@ -270,7 +267,7 @@ a {
 }
 
 
-/*ASIDE_Tag-Themes*/
+/*ASIDE_Tag*/
 .aside_tag {
   text-align: center;
   display: flex;
@@ -303,6 +300,12 @@ a {
   cursor: pointer;
 }
 
+/*ASIDE_Themes*/
+.aside_themes {
+  display: flex;
+  flex-direction: column;
+}
+
 .themes_btn {
   display: block;
   font-size: 14px;
@@ -311,30 +314,35 @@ a {
   border-bottom: 1px solid #eee;
 }
 
-.themes_btn:hover {
-  background: #f4f7f6;
-}
-
 .themes_btn > span {
   font-size: 12px;
   color: #b59f5b;
   vertical-align: 6px;
 }
 
-.aside_themes input[type=checkbox] {
-  position: absolute;
-  display: none;
-}
-
-.aside_themes input[type=checkbox]:checked + .themes_btn {
+.themes_btn:active {
   background: #f4f7f6;
 }
 
-.themes_section {
-/*  display: none;*/
-  margin-left: 20px;
+.checkbox_btn {
+  display: none;
 }
 
+.checkbox_btn:checked + .themes_btn {
+  background: #f4f7f6;
+}
+
+.checkbox_btn:checked + .themes_btn + .themes_content {
+  display: block;
+}
+
+.themes_content {
+  display: none;
+  border: 1px solid blue;
+  width: 100%;
+  padding: 20px;
+  margin-left: 20px;
+}
 
 /*FOOTER*/
 .footer {
